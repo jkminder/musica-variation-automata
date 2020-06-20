@@ -59,5 +59,5 @@ ADD_mva.describe() # print a summarization of the automata and its variation fun
 ADD_mva.run(verbose_mode=True) # run the automata with step by step verbose mode
 ```
 
-An example of the functions **BINARY ADDITION** and **AND** can be found <a href="src/example.py"> here</a>.
+An example of the functions **BINARY ADDITION** and **AND** can be found <a href="src/examples.py"> here</a>.
 
