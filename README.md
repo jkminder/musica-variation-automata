@@ -1,10 +1,11 @@
-# musical-variation-automata
+# Musical Variation Automata
 A model for computation based on musical variation, developed for the ETH Zurich class "Models of Computation"
 
 This is a python compiler for the musical variation automata.
 
 ##The Automata
-The automata is based on the a composing technique in classical music called "variation". An initial theme (melody) is changed based on some rules. This is called a variation. The composer reuses the initial theme through out his composition, but instead of the exact theme a variation is used. This is repeated multiple times.
+
+The automata is based on a composing technique in classical music called "variation". An initial theme (melody) is changed based on some rules. This is called a variation. The composer reuses the initial theme through out his composition, but instead of the exact theme a variation is used. This is repeated multiple times.
 
 The automata formalizes this by defining variation functions. A variation function takes a theme and defines the variation of the theme. An example would be:
 
@@ -17,9 +18,11 @@ The musical variation automata is turing complete.
 More details and examples can be found in the <a href="slides.pdf"> slides</a>.
 
 ##Requirements
+
 If you want to output a midi file, the MidiUtil library is required: https://midiutil.readthedocs.io/
 
 ##Functionality
+
 To create a new automata, instantiate the Automata class with its name:
 ```
 example_automata = Automata("example")
@@ -34,7 +37,8 @@ p_8 = Pause(1 / 8)
 ```
 
 To define the variation function:
-<img src="/Variation_Function_Example.png" width="200" />
+
+<img src="/Variation_Function_Example.png" width="400" />
 ```
 va_function = VariationFunction([c2_4, e2_8], [p_8, a2_8])
 ```
