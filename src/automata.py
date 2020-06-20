@@ -108,7 +108,10 @@ class Automata:
         iterations = 0
         while True:
             if (verbose_mode):
-                input("\nPress enter for next iteration:")
+                in_s = input("\nPress enter for next iteration ('r' for run until halting):")
+                if in_s == "r":
+                    verbose_mode = False
+
             iterations += 1
             if iterations > max_iterations:
                 print("Automata reached maximum number of iterations " + str(max_iterations))
@@ -167,6 +170,7 @@ class Automata:
 
 
     def save_score_to_midi(self, filename):
+        #requires https://midiutil.readthedocs.io/
         from midiutil.MidiFile import MIDIFile
         track = 0
         channel = 0

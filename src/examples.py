@@ -12,6 +12,10 @@ p_4 = Pause(1 / 4)
 p_8 = Pause(1 / 8)
 
 def AND():
+    """
+    Takes a musical boolean in c_2 followed by a musical boolean in e_2 and computes the AND of these two bools. The ouput is in a_2.
+    The musical boolean is defined by 0 = 1/8 and 1 = 1/4.
+    """
     AND_mva = Automata("AND")
     AND_mva.add_variation_function(VariationFunction([c2_8, e2_8], [p_8, a1_8]))
     AND_mva.add_variation_function(VariationFunction([c2_4, e2_8], [p_8, a1_8]))
@@ -25,7 +29,10 @@ def AND():
 
 
 def BINARY_ADDITION():
-
+    """
+    Takes a binary string in c_2 followed by a reversed binary string in e_2 and computes the addition of these two numbers. The ouput is in a_2.
+    The musical boolean is defined by 0 = 1/8 and 1 = 1/4.
+    """
     ADD_mva = Automata("Binary Adder")
     # 1-bit addition
     ADD_mva.add_variation_function(VariationFunction([c2_4, e2_4], [f1_4, a1_8]))
